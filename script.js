@@ -72,7 +72,7 @@ const perguntas = [
     },
 ];
 
- 
+
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
@@ -84,7 +84,7 @@ function mostraPergunta() {
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-     caixaAlternativas.textContent = "";
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 
@@ -99,7 +99,7 @@ function mostraAlternativas(){
 
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historia += afirmacoes + "";
+    historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
 }
