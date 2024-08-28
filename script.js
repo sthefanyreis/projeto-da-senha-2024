@@ -89,6 +89,7 @@ let historiaFinal = "";
 
 botaoIniciar.addEventListener('click', iniciaJogo);
 
+
 function iniciaJogo() {
     atual = 0;
     historiaFinal = "";
@@ -124,7 +125,12 @@ function mostraAlternativas(){
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
-    if(opcaoSelecionada.proxima !== undefined){
+    if(opcaoSelecionada.proxima !== undefined){function iniciaJogo() {
+        atual = 0;
+        historiaFinal = "";
+        telaInicial.style.display = 'none';
+}
+
         atual = opcaoSelecionada.proxima;
     }else{
         mostraResultado();
@@ -137,7 +143,7 @@ function respostaSelecionada(opcaoSelecionada) {
 
 function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent historiaFinal;
+    textoResultado.textContent (historiaFinal);
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
     botaoJogarNovamente.addEventListener("click", jogaNovamente());
